@@ -1,7 +1,11 @@
 package converters
 
 import (
+	"bytes"
 	"encoding/binary"
+	"golang.org/x/text/encoding/korean"
+	"golang.org/x/text/transform"
+	"io"
 	"unicode/utf16"
 	"unsafe"
 )
@@ -306,6 +310,10 @@ func (conv *StringConverter) Decode(input []byte) string {
 			output = append(output, uint16(char))
 		}
 		return string(utf16.Decode(output))
+	case 0x348:
+		decoder := transform.NewReader(bytes.NewReader(input), korean.EUCKR.NewDecoder())
+		decoded, _ := io.ReadAll(decoder)
+		return string(decoded)
 	default:
 		if conv.dBuffer == nil {
 			return string(input)
