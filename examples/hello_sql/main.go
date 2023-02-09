@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 
-	_ "github.com/sijms/go-ora"
+	_ "github.com/vtov-kr/go-ora"
 )
 
 func dieOnError(msg string, err error) {

@@ -10,13 +10,13 @@ import (
 	"encoding/pem"
 	"errors"
 	"fmt"
-	"github.com/sijms/go-ora/trace"
+	"github.com/vtov-kr/go-ora/trace"
 	"net"
 	"reflect"
 	"strings"
 	"time"
 
-	"github.com/sijms/go-ora/converters"
+	"github.com/vtov-kr/go-ora/converters"
 )
 
 type Data interface {
@@ -385,22 +385,24 @@ func (session *Session) Disconnect() {
 	}
 }
 
-//func (session *Session) Debug() {
-//	//if session.index > 350 && session.index < 370 {
-//	fmt.Println("index: ", session.index)
-//	fmt.Printf("data buffer: %#v\n", session.InBuffer[session.index:session.index+30])
-//	//oldIndex := session.index
-//	//fmt.Println(session.GetClr())
-//	//session.index = oldIndex
-//	//}
-//}
-//func (session *Session) DumpIn() {
-//	log.Printf("%#v\n", session.InBuffer)
-//}
+//	func (session *Session) Debug() {
+//		//if session.index > 350 && session.index < 370 {
+//		fmt.Println("index: ", session.index)
+//		fmt.Printf("data buffer: %#v\n", session.InBuffer[session.index:session.index+30])
+//		//oldIndex := session.index
+//		//fmt.Println(session.GetClr())
+//		//session.index = oldIndex
+//		//}
+//	}
 //
-//func (session *Session) DumpOut() {
-//	log.Printf("%#v\n", session.OutBuffer)
-//}
+//	func (session *Session) DumpIn() {
+//		log.Printf("%#v\n", session.InBuffer)
+//	}
+//
+//	func (session *Session) DumpOut() {
+//		log.Printf("%#v\n", session.OutBuffer)
+//	}
+//
 // Write send data store in output buffer through network
 //
 // if data bigger than SessionDataUnit it should be divided into

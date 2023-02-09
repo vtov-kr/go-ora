@@ -10,7 +10,7 @@ package ntlmssp
 import (
 	"crypto/hmac"
 	"crypto/md5"
-	"github.com/sijms/go-ora/network/security/md4"
+	"github.com/vtov-kr/go-ora/network/security/md4"
 	"strings"
 )
 

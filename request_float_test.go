@@ -8,8 +8,8 @@ import (
 	"os"
 	"testing"
 
-	_ "github.com/sijms/go-ora"
-	"github.com/sijms/go-ora/converters"
+	_ "github.com/vtov-kr/go-ora"
+	"github.com/vtov-kr/go-ora/converters"
 )
 
 var conn *sql.DB

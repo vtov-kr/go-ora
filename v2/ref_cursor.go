@@ -1,6 +1,6 @@
 package go_ora
 
-import "github.com/sijms/go-ora/v2/network"
+import "github.com/vtov-kr/go-ora/v2/network"
 
 type RefCursor struct {
 	defaultStmt
