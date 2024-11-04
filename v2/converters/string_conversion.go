@@ -1,7 +1,11 @@
 package converters
 
 import (
+	"bytes"
 	"encoding/binary"
+	"golang.org/x/text/encoding/korean"
+	"golang.org/x/text/transform"
+	"io"
 	"unicode/utf16"
 	"unsafe"
 )
@@ -243,7 +247,11 @@ func (conv *StringConverter) Decode(input []byte) string {
 			output = append(output, uint16(char))
 		}
 		return string(utf16.Decode(output))
-	case 0x33D, 0x348, 0x34D, 0x34E, 0x352, 0x353, 0x35D, 0x361, 0x362, 0x363, 0x364, 0x3E0: // TLBConv12Byte
+	case 0x348:
+		decoder := transform.NewReader(bytes.NewReader(input), korean.EUCKR.NewDecoder())
+		decoded, _ := io.ReadAll(decoder)
+		return string(decoded)
+	case 0x33D, 0x34D, 0x34E, 0x352, 0x353, 0x35D, 0x361, 0x362, 0x363, 0x364, 0x3E0: // TLBConv12Byte
 		index := 0
 		result := 0
 		output := make([]uint16, 0, len(input))
