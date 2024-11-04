@@ -3,7 +3,7 @@ package go_ora
 import (
 	"database/sql/driver"
 
-	"github.com/sijms/go-ora/v2/configurations"
+	"github.com/vtov-kr/go-ora/v2/configurations"
 )
 
 type RefCursor struct {

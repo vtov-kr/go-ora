@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	_ "github.com/sijms/go-ora/v2"
-	go_ora "github.com/sijms/go-ora/v2"
+	_ "github.com/vtov-kr/go-ora/v2"
+	go_ora "github.com/vtov-kr/go-ora/v2"
 )
 
 var server string

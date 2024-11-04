@@ -18,11 +18,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/sijms/go-ora/v2/configurations"
+	"github.com/vtov-kr/go-ora/v2/configurations"
 
-	"github.com/sijms/go-ora/v2/trace"
+	"github.com/vtov-kr/go-ora/v2/trace"
 
-	"github.com/sijms/go-ora/v2/converters"
+	"github.com/vtov-kr/go-ora/v2/converters"
 )
 
 // var ErrConnectionReset error = errors.New("connection reset")
@@ -483,7 +483,7 @@ func (session *Session) BreakConnection() error {
 	// 		return nil, err
 	// 	}
 	// } else {
-	// 
+	//
 	// }
 	// ret := make([]PacketInterface, 0, 2)
 	// var pck PacketInterface
@@ -723,7 +723,7 @@ func (session *Session) processMarker() error {
 	// receive all packet until you get marker
 	// var pck PacketInterface = nil
 	// for pck == nil || pck.getPacketType() != MARKER {
-	// 
+	//
 	// 	if session.isFinalPacketRead {
 	// 		break
 	// 	}
@@ -1345,7 +1345,7 @@ func (session *Session) readPacket() (PacketInterface, error) {
 		// 	default:
 		// 		return nil, errors.New(fmt.Sprintf("TTC error: received code %d during stmt reading", msg))
 		// 	}
-		// 
+		//
 		// }
 		// fallthrough
 	default:
@@ -1706,7 +1706,7 @@ func (session *Session) GetClr() (output []byte, err error) {
 	// 	output, err = session.read(int(size))
 	// 	return
 	// }
-	// 
+	//
 	// for {
 	// 	var size1 int
 	// 	if session.UseBigClrChunks {
@@ -1995,18 +1995,18 @@ func (session *Session) WriteKeyVal(buffer *bytes.Buffer, key []byte, val []byte
 // 	}
 // 	return ret, nil
 // }
-// 
+//
 // func (session *Session) ReadInt(buffer *bytes.Buffer, size int, compress, bigEndian bool) (int, error) {
 // 	temp, err := session.ReadInt64(buffer, size, compress, bigEndian)
 // 	return int(temp), err
 // }
-// 
+//
 // func (session *Session) ReadBytes(buffer *bytes.Buffer, size int) ([]byte, error) {
 // 	temp := make([]byte, size)
 // 	_, err := buffer.Read(temp)
 // 	return temp, err
 // }
-// 
+//
 // func (session *Session)ReadClr(buffer *bytes.Buffer) (output []byte, err error){
 // 	var size uint8
 // 	var rb []byte
@@ -2043,7 +2043,7 @@ func (session *Session) WriteKeyVal(buffer *bytes.Buffer, key []byte, val []byte
 // 	output = tempBuffer.Bytes()
 // 	return
 // }
-// 
+//
 // func (session *Session)ReadDlc(buffer *bytes.Buffer) (output []byte, err error) {
 // 	var length int
 // 	length, err = session.ReadInt(buffer, 4, true, true)

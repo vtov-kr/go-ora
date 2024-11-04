@@ -13,7 +13,7 @@ import (
 	"github.com/jcmturner/gokrb5/v8/credentials"
 	"github.com/jcmturner/gokrb5/v8/gssapi"
 	"github.com/jcmturner/gokrb5/v8/spnego"
-	"github.com/sijms/go-ora/v2/advanced_nego"
+	"github.com/vtov-kr/go-ora/v2/advanced_nego"
 )
 
 type KerberosAuth struct{}

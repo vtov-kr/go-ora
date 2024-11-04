@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	go_ora "github.com/sijms/go-ora/v2"
+	go_ora "github.com/vtov-kr/go-ora/v2"
 )
 
 func usage() {

@@ -15,10 +15,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/sijms/go-ora/v2/lazy_init"
+	"github.com/vtov-kr/go-ora/v2/lazy_init"
 
-	"github.com/sijms/go-ora/v2/converters"
-	"github.com/sijms/go-ora/v2/network"
+	"github.com/vtov-kr/go-ora/v2/converters"
+	"github.com/vtov-kr/go-ora/v2/network"
 )
 
 var (
@@ -276,7 +276,7 @@ func getBool(col interface{}) (bool, error) {
 }
 
 // func getNumber(col interface{}) (*Number, error) {
-// 
+//
 // }
 
 // get prim float64 from supported types
@@ -670,7 +670,7 @@ func setUDTObject(value reflect.Value, cust *customType, input []ParameterInfo) 
 	if value.Kind() == reflect.Slice || value.Kind() == reflect.Array {
 		return setArray(value, input)
 		// if cust.isRegularArray() {
-		// 
+		//
 		// } else {
 		// 	arrayObj := reflect.MakeSlice(reflect.SliceOf(cust.typ), 0, len(input))
 		// 	for _, par := range input {
@@ -1237,7 +1237,7 @@ func decodeObject(conn *Connection, parent *ParameterInfo, temporaryLobs *[][]by
 			for x := 0; x < itemsLen; x++ {
 				tempPar := parent.cusType.attribs[0]
 				// if parent.cusType.isRegularArray() {
-				// 
+				//
 				// } else {
 				// 	tempPar = parent.clone()
 				// }

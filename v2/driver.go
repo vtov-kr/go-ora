@@ -9,10 +9,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/sijms/go-ora/v2/advanced_nego"
-	"github.com/sijms/go-ora/v2/configurations"
+	"github.com/vtov-kr/go-ora/v2/advanced_nego"
+	"github.com/vtov-kr/go-ora/v2/configurations"
 
-	"github.com/sijms/go-ora/v2/converters"
+	"github.com/vtov-kr/go-ora/v2/converters"
 )
 
 type OracleDriver struct {
@@ -122,7 +122,7 @@ func AddSessionParam(db *sql.DB, key, value string) error {
 // 	if err != nil {
 // 		return err
 // 	}
-// 
+//
 // 	if drv, ok := conn.Driver().(*OracleDriver); ok {
 // 		return RegisterRegularTypeArrayWithOwner(conn, drv.UserId, regularTypeName, arrayTypeName, itemMaxSize)
 // 	}

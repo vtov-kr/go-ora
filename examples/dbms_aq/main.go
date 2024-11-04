@@ -6,9 +6,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/sijms/go-ora/dbms"
-	_ "github.com/sijms/go-ora/v2"
-	go_ora "github.com/sijms/go-ora/v2"
+	"github.com/vtov-kr/go-ora/dbms"
+	_ "github.com/vtov-kr/go-ora/v2"
+	go_ora "github.com/vtov-kr/go-ora/v2"
 )
 
 type test1 struct {

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sijms/go-ora/v2/converters"
+	"github.com/vtov-kr/go-ora/v2/converters"
 )
 
 func (par *ParameterInfo) setDataType(goType reflect.Type, value driver.Value, conn *Connection) error {
